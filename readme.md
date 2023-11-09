@@ -27,11 +27,10 @@ hide (hide the cursor)
 
 ## Displaying filename and line number
 
-If you use console.log for simple debugging you don't have to have a very big application before you end up forgetting where the console.log are occurring. By using 'patchConsoleLog' you get the filename and the line number that the console.log occurred at.
+If you use console.log for simple debugging you don't have to have a very big application before you end up forgetting where the console.log are occurring. By using 'patchconsole' you get the filename and the line number that the console.log occurred at.
 
 ```
-const patchConsoleLog = require('./patchconsole.js')
-patchConsoleLog()
+require('./patchconsole.js')()
 console.log('Some example output')
 ```
 

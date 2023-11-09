@@ -1,5 +1,5 @@
 const colourize = require('./colourize.js')
-const patchConsoleLog = require('./patchconsole.js')
+require('./patchconsole.js')()
 
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -8,7 +8,6 @@ function sleep(ms) {
 }
 
 (async ()=>{
-    patchConsoleLog()
     let cols=['black','red','yellow','purple','cyan','green','blue','white']
     for(let i=0;i<20;i++){
         let fore=cols[Math.trunc(Math.random()*cols.length)]
