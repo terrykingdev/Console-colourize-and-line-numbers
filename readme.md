@@ -29,11 +29,17 @@ hide (hide the cursor)
 
 If you use console.log for simple debugging you don't have to have a very big application before you end up forgetting where the console.log are occurring. By using 'patchConsoleLog' you get the filename and the line number that the console.log occurred at.
 
+```
+const patchConsoleLog = require('./patchconsole.js')
+patchConsoleLog()
+console.log('Some example output')
+```
+
 e.g.
 ```
 Normal output:
 Some example output
 
 With patchConsoleLog:
-index.js:42: Some example output
+index.js:2: Some example output
 ```
