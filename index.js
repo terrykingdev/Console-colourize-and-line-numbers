@@ -34,6 +34,7 @@ function sleep(ms) {
 }
 
 (async ()=>{
+    patchConsoleLog()
     let cols=['black','red','yellow','purple','cyan','green','blue','white']
     for(let i=0;i<20;i++){
         let fore=cols[Math.trunc(Math.random()*cols.length)]
@@ -53,7 +54,7 @@ function sleep(ms) {
         console.log(colourize(`{{x=${px}}} You can position the cursor and move the cursor up {{up}}`))
         await sleep(50)
     }
-    console.log()
+    console.log('')
 
     for(let x=0;x<40;x++){
         let progress=''
@@ -65,7 +66,6 @@ function sleep(ms) {
     }
     console.log(colourize('{{show}}'))
 
-    patchConsoleLog()
     console.log("The patchConsoleLog function uses colourize which prints the file and line number that the console.log is on.")
 
 })();
